@@ -1,0 +1,43 @@
+{
+  "name": "airdrop-proof",
+  "version": "0.0.1",
+  "description": "A project that shows the implementing of airdrop using merkle tree for address whitelisting",
+  "main": "main.js",
+  "scripts": {
+    "build": "npm run format && npx hardhat compile",
+    "test": "npm run build && REPORT_GAS=true npx hardhat test",
+    "format": "prettier --write \"./**/*.ts\" \"test/**/*.ts\" && prettier --list-different --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
+    "deploy:MerkleAirdrop": "npm run test && npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network lisk-sepolia --verify",
+    "script:MerkleAirdrop": "npx hardhat run script/interaction.ts --network lisk-sepolia",
+    "start:node": "npx hardhat node",
+    "start:local": "npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network localhost"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IdrisAkintobi/airdrop-with-merkle.git"
+  },
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "airdrop",
+    "merkle-tree"
+  ],
+  "author": "IdrisAkintobi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IdrisAkintobi/airdrop-with-merkle/issues"
+  },
+  "homepage": "https://github.com/IdrisAkintobi/airdrop-with-merkle#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.10",
+    "prettier": "^3.3.3",
+    "prettier-plugin-solidity": "^1.4.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "@openzeppelin/merkle-tree": "^1.0.7",
+    "csv-parse": "^5.5.6",
+    "ethers": "^6.13.2"
+  }
+}
