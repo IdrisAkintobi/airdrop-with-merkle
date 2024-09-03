@@ -10,7 +10,8 @@
     "deploy:MerkleAirdrop": "npm run test && npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network lisk-sepolia --verify",
     "script:MerkleAirdrop": "npx hardhat run script/interaction.ts --network lisk-sepolia",
     "start:node": "npx hardhat node",
-    "start:local": "npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network localhost"
+    "start:local": "npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network localhost",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
