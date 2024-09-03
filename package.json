@@ -7,6 +7,7 @@
     "build": "npm run format && npx hardhat compile",
     "test": "npm run build && REPORT_GAS=true npx hardhat test",
     "format": "prettier --write \"./**/*.ts\" \"test/**/*.ts\" && prettier --list-different --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
+    "gen:merkle-root": "ts-node script/merkle-tree-script.ts ",
     "deploy:MerkleAirdrop": "npm run test && npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network lisk-sepolia --verify",
     "script:MerkleAirdrop": "npx hardhat run script/interaction.ts --network lisk-sepolia",
     "start:node": "npx hardhat node",
@@ -33,7 +34,8 @@
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "hardhat": "^2.22.10",
     "prettier": "^3.3.3",
-    "prettier-plugin-solidity": "^1.4.1"
+    "prettier-plugin-solidity": "^1.4.1",
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.2",

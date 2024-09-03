@@ -42,3 +42,12 @@ export async function generateMerkleTree(): Promise<
     fileStream.pipe(parser);
   });
 }
+
+// Usage example
+generateMerkleTree()
+  .then((tree) => {
+    console.info("Merkle Tree Root:", tree.root);
+  })
+  .catch((error) => {
+    console.error("Error generating Merkle Tree Root:", error);
+  });

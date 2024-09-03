@@ -26,21 +26,29 @@ MerkleAirdrop Contract Address: 0x966c3e6502E3F0090cAa737784fAeB0BC341190c
 
 ---
 
+### Generate Merkle tree root
+
+To generate merkle tree root after the csv file is updated, run the command below. The merkle tree root will be printed to the console.
+
+```shell
+npm run gen:merkle-root
+```
+
 ---
 
-Build
+### Build
 
 ```shell
 npm run build
 ```
 
-Test
+### Test
 
 ```shell
 npm run test
 ```
 
-Start (local)
+### Start (local)
 
 1st terminal
 
@@ -54,7 +62,7 @@ npm run start:node
 npm run start:local
 ```
 
-Deploy
+### Deploy
 
 ```shell
 deploy:MerkleAirdrop
