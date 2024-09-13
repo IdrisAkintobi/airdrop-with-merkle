@@ -53,13 +53,13 @@ npm run test
 1st terminal
 
 ```shell
-npm run start:node
+npm start:local:node
 ```
 
 2nd terminal
 
 ```shell
-npm run start:local
+npm run depl0y:local
 ```
 
 ### Deploy
