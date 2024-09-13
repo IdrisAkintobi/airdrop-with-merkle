@@ -9,9 +9,9 @@
     "format": "prettier --write \"./**/*.ts\" \"test/**/*.ts\" && prettier --list-different --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
     "gen:merkle-root": "ts-node script/merkle-tree-script.ts ",
     "deploy:MerkleAirdrop": "npm run test && npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network lisk-sepolia --verify",
-    "script:MerkleAirdrop": "npx hardhat run script/interaction.ts --network lisk-sepolia",
-    "start:node": "npx hardhat node",
-    "start:local": "npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network localhost",
+    "script:MerkleAirdrop": "npx hardhat run script/interaction.ts --network localhost",
+    "start:local:node": "npx hardhat node",
+    "deploy:local": "npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network localhost",
     "prepare": "husky"
   },
   "repository": {
