@@ -39,13 +39,13 @@ npm run gen:merkle-root
 ### Build
 
 ```shell
-npm run build
+npm build
 ```
 
 ### Test
 
 ```shell
-npm run test
+npm test
 ```
 
 ### Start (local)
@@ -53,17 +53,17 @@ npm run test
 1st terminal
 
 ```shell
-npm start:local:node
+npm run start:local:node
 ```
 
 2nd terminal
 
 ```shell
-npm run depl0y:local
+npm run deploy:local
 ```
 
 ### Deploy
 
 ```shell
-deploy:MerkleAirdrop
+npm run deploy:MerkleAirdrop
 ```
