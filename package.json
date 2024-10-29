@@ -6,12 +6,13 @@
   "scripts": {
     "build": "npm run format && npx hardhat compile",
     "test": "npm run build && REPORT_GAS=true npx hardhat test",
-    "format": "prettier --write \"./**/*.ts\" \"test/**/*.ts\" && prettier --list-different --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
-    "gen:merkle-root": "ts-node script/merkle-tree-script.ts ",
+    "format": "prettier --write --ignore-path .gitignore .",
     "deploy:MerkleAirdrop": "npm run test && npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network lisk-sepolia --verify",
-    "script:MerkleAirdrop": "npx hardhat run script/interaction.ts --network localhost",
+    "script:MerkleAirdrop": "npx hardhat run scripts/MerkleAirdrop.interaction.ts",
+    "script:MerkleAirdropV2": "npx hardhat run scripts/MerkleAirdropV2.interaction.ts --network localhost",
     "start:local:node": "npx hardhat node",
-    "deploy:local": "npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network localhost",
+    "deploy:local:MerkleAirdrop": "npx hardhat ignition deploy ./ignition/modules/MerkleAirdrop.ts --network localhost",
+    "deploy:local:MerkleAirdropV2": "npx hardhat ignition deploy ./ignition/modules/MerkleAirdropV2.ts --network lisk-sepolia",
     "prepare": "husky"
   },
   "repository": {
@@ -41,6 +42,8 @@
     "@openzeppelin/contracts": "^5.0.2",
     "@openzeppelin/merkle-tree": "^1.0.7",
     "csv-parse": "^5.5.6",
-    "ethers": "^6.13.2"
+    "ethers": "^6.13.2",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.4.0"
   }
 }

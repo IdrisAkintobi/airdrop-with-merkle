@@ -1,6 +1,6 @@
 // scripts/interact.js
 import { ethers } from "hardhat";
-import { generateMerkleTree } from "./merkle-tree-script";
+import { generateMerkleTree } from "./helpers/merkle-tree-generator";
 
 async function main() {
   const iDrisTokenAddress = "0x39A3bE77b7b7a574800373CE8CaFa7B5082EA82f";
